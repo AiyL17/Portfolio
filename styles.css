@@ -790,3 +790,58 @@ footer {
         font-size: 2.5rem;
     }
 }
+
+/* Figma Modal Styles */
+.figma-modal-content {
+    max-width: 95%;
+    max-height: 95vh;
+    width: 1200px;
+}
+
+.figma-embed-container {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.figma-embed-container iframe {
+    border-radius: 10px;
+}
+
+/* Figma Badge */
+.figma-preview {
+    position: relative;
+}
+
+.figma-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #1ABCFE, #A259FF);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.figma-badge svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .figma-modal-content {
+        width: 95%;
+    }
+    
+    .figma-embed-container iframe {
+        height: 400px;
+    }
+}

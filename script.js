@@ -174,6 +174,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Figma Modal Logic
+    const figmaModal = document.getElementById('figma-modal');
+    const figmaIframe = document.getElementById('figma-iframe');
+    const figmaModalTitle = document.getElementById('figma-modal-title');
+    const figmaCloseBtn = document.getElementById('figma-close-btn');
+    const viewFigmaButtons = document.querySelectorAll('.view-figma-btn');
+
+    viewFigmaButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const figmaUrl = btn.getAttribute('data-figma');
+            const title = btn.getAttribute('data-title');
+            
+            figmaIframe.src = figmaUrl;
+            figmaModalTitle.textContent = title;
+            figmaModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    const closeFigmaModal = () => {
+        figmaModal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+        setTimeout(() => {
+            figmaIframe.src = '';
+        }, 300);
+    };
+
+    figmaCloseBtn.addEventListener('click', closeFigmaModal);
+
+    figmaModal.addEventListener('click', (e) => {
+        if (e.target === figmaModal) {
+            closeFigmaModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && figmaModal.classList.contains('show')) {
+            closeFigmaModal();
+        }
+    });
+
     // Auto-play video preview on hover
     const projectVideos = document.querySelectorAll('.project-image video');
     projectVideos.forEach(video => {
