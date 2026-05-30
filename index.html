@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Dalogdog - Artist & UI/UX Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Theme Toggle Script to avoid flash of wrong theme -->
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+<body>
+    <header id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Alex<span>ander.</span></a>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Expertise</a></li>
+                    <li><a href="#projects">Gallery</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <svg id="moon-icon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg id="sun-icon" class="theme-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <h1>Hi, I'm <span class="highlight">Alexander Dalogdog</span></h1>
+                    <p>Award-winning poster artist and UI/UX designer creating impactful visual experiences.</p>
+                    <a href="#projects" class="btn primary-btn">View My Gallery</a>
+                </div>
+                <div class="hero-image reveal delay-1">
+                    <div class="image-wrapper">
+                        <img src="assets/profile_pic.png" alt="Profile Picture">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="about section">
+            <div class="container reveal">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.2rem; color: var(--text-muted);">
+                        I am a creative professional specializing in poster design, graphic arts, and UI/UX design. With multiple awards from school and community competitions, I bring artistic vision and user-centered design thinking to every project. Whether crafting compelling posters or designing intuitive digital interfaces, I create visual experiences that engage, inform, and inspire.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills section">
+            <div class="container reveal">
+                <h2 class="section-title">My Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-card"><h3>Poster Design</h3><p>Award-winning poster creation for events, campaigns, and competitions</p></div>
+                    <div class="skill-card"><h3>Visual Arts</h3><p>Illustration, composition, color theory, typography, and branding</p></div>
+                    <div class="skill-card"><h3>UI/UX Design</h3><p>User interface design, wireframing, and prototyping with Figma and Canva</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section">
+            <div class="container">
+                <h2 class="section-title reveal">My Works</h2>
+                <div class="projects-grid">
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="assets/Works/SeaGuide (1).png" alt="SeaGuide Design">
+                        </div>
+                        <div class="project-info">
+                            <h3>SeaGuide</h3>
+                            <p>Marine conservation and awareness campaign design.</p>
+                            <button class="btn secondary-btn view-project-btn" data-image="assets/Works/SeaGuide (1).png" data-title="SeaGuide">View Artwork</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal delay-2">
+                        <div class="project-image">
+                            <img src="assets/Works/brochure1 (1).png" alt="Brochure Design">
+                        </div>
+                        <div class="project-info">
+                            <h3>Brochure Design</h3>
+                            <p>Professional brochure layout and design.</p>
+                            <button class="btn secondary-btn view-project-btn" data-image="assets/Works/brochure1 (1).png" data-title="Brochure Design" data-gallery="assets/Works/brochure2 (1).png">View Artwork</button>
+                        </div>
+                    </div>
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="assets/Works/IMG_20230329_002007_761.jpg" alt="Poster Design 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>Creative Poster</h3>
+                            <p>Eye-catching poster design with vibrant colors.</p>
+                            <button class="btn secondary-btn view-project-btn" data-image="assets/Works/IMG_20230329_002007_761.jpg" data-title="Creative Poster">View Artwork</button>
+                        </div>
+                    </div>
+                    <div class="project-card reveal delay-1">
+                        <div class="project-image">
+                            <img src="assets/Works/IMG_20230430_185042_78.jpg" alt="Poster Design 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Event Poster</h3>
+                            <p>Promotional poster for special event.</p>
+                            <button class="btn secondary-btn view-project-btn" data-image="assets/Works/IMG_20230430_185042_78.jpg" data-title="Event Poster">View Artwork</button>
+                        </div>
+                    </div>
+                    <div class="project-card reveal delay-2">
+                        <div class="project-image">
+                            <img src="assets/Works/IMG_20230529_182402_035.jpg" alt="Poster Design 3">
+                        </div>
+                        <div class="project-info">
+                            <h3>Campaign Poster</h3>
+                            <p>Impactful design for awareness campaign.</p>
+                            <button class="btn secondary-btn view-project-btn" data-image="assets/Works/IMG_20230529_182402_035.jpg" data-title="Campaign Poster">View Artwork</button>
+                        </div>
+                    </div>
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="assets/Works/IMG_20230606_231144_837.jpg" alt="Poster Design 4">
+                        </div>
+                        <div class="project-info">
+                            <h3>Artistic Poster</h3>
+                            <p>Creative poster showcasing artistic vision.</p>
+                            <button class="btn secondary-btn view-project-btn" data-image="assets/Works/IMG_20230606_231144_837.jpg" data-title="Artistic Poster">View Artwork</button>
+                        </div>
+                    </div>
+                    <div class="project-card reveal delay-1">
+                        <div class="project-image">
+                            <img src="assets/Works/IMG_20230323_211901_669.jpg" alt="Poster Design 5">
+                        </div>
+                        <div class="project-info">
+                            <h3>Creative Design</h3>
+                            <p>Innovative poster with unique visual elements.</p>
+                            <button class="btn secondary-btn view-project-btn" data-image="assets/Works/IMG_20230323_211901_669.jpg" data-title="Creative Design">View Artwork</button>
+                        </div>
+                    </div>
+                    <div class="project-card reveal delay-2">
+                        <div class="project-image">
+                            <img src="assets/Works/IMG_20230329_001909_525.jpg" alt="Poster Design 6">
+                        </div>
+                        <div class="project-info">
+                            <h3>Visual Artwork</h3>
+                            <p>Expressive poster design with bold aesthetics.</p>
+                            <button class="btn secondary-btn view-project-btn" data-image="assets/Works/IMG_20230329_001909_525.jpg" data-title="Visual Artwork">View Artwork</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="awards section">
+            <div class="container">
+                <h2 class="section-title reveal">Awards & Certificates</h2>
+                <p class="awards-intro reveal" style="text-align: center; max-width: 700px; margin: 0 auto 3rem; color: var(--text-muted); font-size: 1.1rem;">
+                    Recognition and achievements from various competitions and professional certifications
+                </p>
+                <div class="awards-grid">
+                    <div class="award-card reveal">
+                        <div class="award-image">
+                            <img src="assets/Kalibulung 2023 Champion.jpg" alt="Kalibulung 2023 Champion Certificate">
+                        </div>
+                        <div class="award-info">
+                            <h3>Kalibulung 2023</h3>
+                            <p class="award-place">Champion</p>
+                            <p class="award-year">On-the-Spot Poster Making Contest</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/Kalibulung 2023 Champion.jpg" 
+                                data-title="Kalibulung 2023 - Champion"
+                                data-gallery="">View Certificate</button>
+                    </div>
+                    <div class="award-card reveal delay-1">
+                        <div class="award-image">
+                            <img src="assets/Kalibulung 2024.jpg" alt="Kalibulung 2024 Certificate">
+                        </div>
+                        <div class="award-info">
+                            <h3>Kalibulung 2024</h3>
+                            <p class="award-place">Champion</p>
+                            <p class="award-year">On-the-Spot Poster Making Contest</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/Kalibulung 2024.jpg" 
+                                data-title="Kalibulung 2024 - Champion"
+                                data-gallery="">View Certificate</button>
+                    </div>
+                    <div class="award-card reveal delay-2">
+                        <div class="award-image">
+                            <img src="assets/MASTS Games 2023.jpg" alt="MASTS Games 2023 Certificate">
+                        </div>
+                        <div class="award-info">
+                            <h3>MASTS Games 2023</h3>
+                            <p class="award-place">1st Runner Up</p>
+                            <p class="award-year">On-the-Spot Poster Making Contest</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/MASTS Games 2023.jpg" 
+                                data-title="MASTS Games 2023 - 1st Runner Up"
+                                data-gallery="assets/Masts/1700959522273.jpg,assets/Masts/401490710_6968802589808886_3989215030626478744_n.jpg,assets/Masts/IMG_20231124_235401_054.jpg,assets/Masts/received_1068603810983272.jpeg,assets/Masts/received_1210364767018679.jpeg,assets/Masts/received_1376270466346704.jpeg,assets/Masts/received_3679311115725244.jpeg,assets/Masts/received_368277965706652.jpeg,assets/Masts/received_783223510274647.jpeg,assets/Masts/received_881545433173073.jpeg">View Certificate</button>
+                    </div>
+                    <div class="award-card reveal">
+                        <div class="award-image">
+                            <img src="assets/PASUC 2nd runner up.jpg" alt="PASUC 2nd Runner Up Certificate">
+                        </div>
+                        <div class="award-info">
+                            <h3>PASUC</h3>
+                            <p class="award-place">2nd Runner Up</p>
+                            <p class="award-year">On-the-Spot Poster Making Contest</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/PASUC 2nd runner up.jpg" 
+                                data-title="PASUC - 2nd Runner Up"
+                                data-gallery="assets/PASUC/received_1103061064135047.jpeg,assets/PASUC/received_1586299765440741 (1).jpeg,assets/PASUC/received_1586299765440741.jpeg">View Certificate</button>
+                    </div>
+                    <div class="award-card reveal delay-1">
+                        <div class="award-image">
+                            <img src="assets/Poster Making - Festival of Talents.jpg" alt="Festival of Talents Certificate">
+                        </div>
+                        <div class="award-info">
+                            <h3>Festival of Talents</h3>
+                            <p class="award-place">Winner</p>
+                            <p class="award-year">On-the-Spot Poster Making Contest</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/Poster Making - Festival of Talents.jpg" 
+                                data-title="Festival of Talents - Winner"
+                                data-gallery="">View Certificate</button>
+                    </div>
+                    <div class="award-card reveal delay-2">
+                        <div class="award-image">
+                            <img src="assets/Nerd Hub Quiz.jpg" alt="Nerd Hub Quiz Certificate">
+                        </div>
+                        <div class="award-info">
+                            <h3>IC Nerd Hub Quiz Bee</h3>
+                            <p class="award-place">1st Runner Up</p>
+                            <p class="award-year">ByteFest 2.0</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/Nerd Hub Quiz.jpg" 
+                                data-title="IC Nerd Hub Quiz Bee - 1st Runner Up"
+                                data-gallery="assets/Nerd Hub/1731465034910.jpg">View Certificate</button>
+                    </div>
+                    <div class="award-card reveal">
+                        <div class="award-image">
+                            <img src="assets/TESDA_CSS-Certificate_of_Completion_page-0001.jpg" alt="TESDA CSS Certificate">
+                        </div>
+                        <div class="award-info">
+                            <h3>TESDA CSS NC II</h3>
+                            <p class="award-place">Certificate of Completion</p>
+                            <p class="award-year">Introduction to CSS</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/TESDA_CSS-Certificate_of_Completion_page-0001.jpg" 
+                                data-title="TESDA CSS NC II - Introduction to CSS"
+                                data-gallery="">View Certificate</button>
+                    </div>
+                    <div class="award-card reveal delay-1">
+                        <div class="award-image">
+                            <img src="assets/TESDA_CSS-Certificate_of_Completion_NEW_page-0001.jpg" alt="TESDA CSS Certificate New">
+                        </div>
+                        <div class="award-info">
+                            <h3>TESDA CSS NC II</h3>
+                            <p class="award-place">Certificate of Completion</p>
+                            <p class="award-year">Installing and Configuring Computer Systems</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/TESDA_CSS-Certificate_of_Completion_NEW_page-0001.jpg" 
+                                data-title="TESDA CSS NC II - Installing and Configuring Computer Systems"
+                                data-gallery="">View Certificate</button>
+                    </div>
+                    <div class="award-card reveal delay-2">
+                        <div class="award-image">
+                            <img src="assets/TOPCIT-1.jpg" alt="TOPCIT Certificate">
+                        </div>
+                        <div class="award-info">
+                            <h3>TOPCIT</h3>
+                            <p class="award-place">Certificate</p>
+                            <p class="award-year">Test of Practical Competency in ICT</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/TOPCIT-1.jpg" 
+                                data-title="TOPCIT - Test of Practical Competency in ICT"
+                                data-gallery="">View Certificate</button>
+                    </div>
+                    <div class="award-card reveal">
+                        <div class="award-image">
+                            <img src="assets/Zamboanga/Messenger_creation_2ce639ea-bfb8-4e22-9bfb-5f5de6385315.jpeg" alt="SUC Fair 2024">
+                        </div>
+                        <div class="award-info">
+                            <h3>SUC Fair 2024</h3>
+                            <p class="award-place">Participant</p>
+                            <p class="award-year">On-the-Spot Poster Making Contest</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/Zamboanga/Messenger_creation_2ce639ea-bfb8-4e22-9bfb-5f5de6385315.jpeg" 
+                                data-title="SUC Fair 2024 - Participant"
+                                data-gallery="assets/Zamboanga/Messenger_creation_2e2d8fd9-85cc-45e5-aa77-6f442859a75a.jpeg,assets/Zamboanga/Messenger_creation_951b2895-d561-4897-8e22-0d2eeb0a7129.jpeg,assets/Zamboanga/Messenger_creation_b413a3a0-9d89-4c15-9819-dc9ee4f87ea9.jpeg,assets/Zamboanga/Messenger_creation_e68c1109-869f-4c83-a21a-d264b6a1f345.jpeg">View Photos</button>
+                    </div>
+                    <div class="award-card reveal">
+                        <div class="award-image">
+                            <img src="assets/PythonEssentials1Update20260120-31-nnaj0u_page-0001.jpg" alt="Python Essentials 1 Certificate">
+                        </div>
+                        <div class="award-info">
+                            <h3>Python Essentials 1</h3>
+                            <p class="award-place">Certificate of Completion</p>
+                            <p class="award-year">Python Programming Fundamentals</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/PythonEssentials1Update20260120-31-nnaj0u_page-0001.jpg" 
+                                data-title="Python Essentials 1 - Python Programming Fundamentals"
+                                data-gallery="">View Certificate</button>
+                    </div>
+                    <div class="award-card reveal delay-1">
+                        <div class="award-image">
+                            <img src="assets/PythonEssentials2Update20260120-31-198h5t_page-0001.jpg" alt="Python Essentials 2 Certificate">
+                        </div>
+                        <div class="award-info">
+                            <h3>Python Essentials 2</h3>
+                            <p class="award-place">Certificate of Completion</p>
+                            <p class="award-year">Intermediate Python Programming</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/PythonEssentials2Update20260120-31-198h5t_page-0001.jpg" 
+                                data-title="Python Essentials 2 - Intermediate Python Programming"
+                                data-gallery="">View Certificate</button>
+                    </div>
+                    <div class="award-card reveal delay-2">
+                        <div class="award-image">
+                            <img src="assets/sundayag.jpg" alt="SUNDAYAG Certificate">
+                        </div>
+                        <div class="award-info">
+                            <h3>SUNDAYAG</h3>
+                            <p class="award-place">Participant</p>
+                            <p class="award-year">On-the-Spot Poster Making Contest</p>
+                        </div>
+                        <button class="btn secondary-btn view-award-btn" 
+                                data-certificate="assets/sundayag.jpg" 
+                                data-title="SUNDAYAG - Participant"
+                                data-gallery="assets/SUNDAYAG/1733550059268.jpg,assets/SUNDAYAG/1733550061903.jpg,assets/SUNDAYAG/1733550079027.jpg,assets/SUNDAYAG/FB_IMG_1733484704979.jpg,assets/SUNDAYAG/received_1238820897238155.jpeg,assets/SUNDAYAG/received_8725411830898878.jpeg">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <div class="container reveal">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-card">
+                    <p>Interested in commissioning artwork, UI/UX design services, or collaborating on a project? Let's connect!</p>
+                    <div class="contact-info">
+                        <p><strong>Phone:</strong> <a href="tel:09686676066">+63 968 667 6066</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:alexanderdalogdog07@gmail.com">alexanderdalogdog07@gmail.com</a></p>
+                        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/alexander.dalogdog5" target="_blank" rel="noopener noreferrer">Alexander Dalogdog</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Award Modal with Gallery -->
+    <div id="award-modal" class="modal hidden">
+        <div class="modal-content award-modal-content">
+            <span class="close-btn" id="award-close-btn">&times;</span>
+            <h3 id="award-modal-title">Award Title</h3>
+            <div class="award-modal-body">
+                <div class="award-main-image">
+                    <img id="award-modal-certificate" src="" alt="Certificate">
+                </div>
+                <div class="award-gallery" id="award-gallery">
+                    <!-- Gallery images will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox for Full Image View -->
+    <div id="lightbox" class="lightbox hidden">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-image" src="" alt="Full size image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- Project Modal with Gallery -->
+    <div id="project-modal" class="modal hidden">
+        <div class="modal-content award-modal-content">
+            <span class="close-btn" id="project-close-btn">&times;</span>
+            <h3 id="modal-title">Project Title</h3>
+            <div class="award-modal-body">
+                <div class="award-main-image">
+                    <img id="modal-image" src="" alt="Project Full Image">
+                </div>
+                <div class="award-gallery" id="project-gallery">
+                    <!-- Gallery images will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="video-close-btn">&times;</span>
+            <h3 id="video-modal-title">Video Title</h3>
+            <video id="modal-video" controls style="max-width: 100%; max-height: 70vh; border-radius: 10px;">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Alexander Dalogdog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
