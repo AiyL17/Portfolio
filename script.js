@@ -1,4 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Loading Screen
+    const loadingScreen = document.getElementById('loading-screen');
+    
+    // Hide loading screen after page loads
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+            // Remove from DOM after animation
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }, 800); // Show loading for at least 800ms
+    });
+
+    // Scroll to Top Button
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    
+    // Show/hide scroll to top button
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+
+    // Scroll to top functionality
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
     // Theme Toggle
     const themeToggleBtn = document.getElementById('theme-toggle');
     const moonIcon = document.getElementById('moon-icon');
