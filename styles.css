@@ -81,6 +81,7 @@ header {
     width: 100%;
     z-index: 1000;
     transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
 }
 
 header.scrolled {
