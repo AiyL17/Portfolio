@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const viewVideoButtons = document.querySelectorAll('.view-video-btn');
 
     viewVideoButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
+        btn.addEventListener('click', async (e) => {
             e.preventDefault();
             const videoSrc = btn.getAttribute('data-video');
             const title = btn.getAttribute('data-title');
@@ -180,7 +180,15 @@ document.addEventListener('DOMContentLoaded', () => {
             videoModalTitle.textContent = title;
             videoModal.classList.add('show');
             document.body.style.overflow = 'hidden';
-            modalVideo.play();
+            
+            // Wait a moment for modal to render, then play
+            setTimeout(async () => {
+                try {
+                    await modalVideo.play();
+                } catch (error) {
+                    // User interaction may be required - modal is open, they can click play
+                }
+            }, 100);
         });
     });
 
@@ -261,8 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     await video.play();
                     isPlaying = true;
                 } catch (error) {
-                    // Auto-play was prevented or interrupted
-                    console.log('Video play prevented:', error.name);
+                    // Auto-play was prevented or interrupted - this is expected behavior
                     isPlaying = false;
                 }
             }
