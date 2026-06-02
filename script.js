@@ -253,12 +253,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // Auto-play video preview on hover
     const projectVideos = document.querySelectorAll('.project-image video');
     projectVideos.forEach(video => {
-        video.addEventListener('mouseenter', () => {
-            video.play();
+        let isPlaying = false;
+        
+        video.addEventListener('mouseenter', async () => {
+            if (!isPlaying) {
+                try {
+                    await video.play();
+                    isPlaying = true;
+                } catch (error) {
+                    // Auto-play was prevented or interrupted
+                    console.log('Video play prevented:', error.name);
+                    isPlaying = false;
+                }
+            }
         });
+        
         video.addEventListener('mouseleave', () => {
-            video.pause();
-            video.currentTime = 0;
+            if (isPlaying) {
+                video.pause();
+                video.currentTime = 0;
+                isPlaying = false;
+            }
+        });
+        
+        // Handle if video is playing and gets interrupted
+        video.addEventListener('pause', () => {
+            isPlaying = false;
+        });
+        
+        video.addEventListener('play', () => {
+            isPlaying = true;
         });
     });
 
